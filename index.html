@@ -23,8 +23,7 @@
 </head>
 <body class="h-full overflow-hidden select-none">
 
-    <!-- Hidden YouTube Player Container -->
-    <div id="ytPlayerContainer" style="position: absolute; top: -9999px; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none;"></div>
+
 
     <!-- Hero Fullscreen Illustration Background -->
     <div class="hero-bg" style="background-image: url('retro-gym-illustration.jpg');">
@@ -64,6 +63,10 @@
         <div class="audio-control-center">
             <!-- Consolidated Music Player Card -->
             <div class="main-player-card">
+                <!-- Mini Screen for YouTube Playback -->
+                <div class="mini-video-screen">
+                    <div id="ytPlayerContainer"></div>
+                </div>
                 
                 <!-- Music Control Row -->
                 <div class="player-main-row">

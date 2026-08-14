@@ -161,8 +161,33 @@ body {
     margin-bottom: 2vh;
 }
 
+/* Mini Video Screen (Tucked above the music capsule player) */
+.mini-video-screen {
+    position: absolute;
+    bottom: calc(100% + 12px);
+    right: 24px;
+    width: 160px;
+    height: 90px; /* 16:9 aspect ratio */
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+    pointer-events: none; /* User interaction is through player buttons, not clicking the video */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0.95;
+    z-index: 10;
+}
+
+.mini-video-screen iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: none;
+}
+
 /* Consolidated Music Player */
 .main-player-card {
+    position: relative;
     width: 100%;
     max-width: 580px;
     background: var(--glass-bg);
@@ -473,5 +498,11 @@ body {
     }
     .slider-control {
         grid-template-columns: 80px 1fr 30px;
+    }
+    .mini-video-screen {
+        width: 110px;
+        height: 62px;
+        right: 16px;
+        bottom: calc(100% + 8px);
     }
 }
