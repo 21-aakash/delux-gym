@@ -371,6 +371,38 @@ body {
     background: rgba(255, 255, 255, 0.08);
 }
 
+/* Volume Control styling */
+.volume-control-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.volume-slider {
+    -webkit-appearance: none;
+    width: 60px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    outline: none;
+    transition: width 0.2s ease;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    border: 1px solid #111;
+}
+
+.volume-slider::-webkit-slider-thumb:hover {
+    background: var(--neon-orange);
+}
+
 /* Collapsible Sliders Drawer */
 .mixer-drawer {
     max-height: 0;
@@ -497,5 +529,8 @@ body {
     }
     .slider-control {
         grid-template-columns: 80px 1fr 30px;
+    }
+    .volume-slider {
+        display: none;
     }
 }

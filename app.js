@@ -469,3 +469,44 @@ motivationSlider.addEventListener("input", (e) => {
     initAudioEngine();
     updateMotivationInterval(val);
 });
+
+// Volume Control Integration
+const volumeBtn = document.getElementById("volumeBtn");
+const volumeIcon = document.getElementById("volumeIcon");
+const musicVolumeSlider = document.getElementById("musicVolumeSlider");
+
+let isMuted = false;
+let preMuteVolume = 100;
+
+function updateVolume(val) {
+    if (state.ytPlayer && state.ytReady) {
+        state.ytPlayer.setVolume(val);
+    }
+    // SVG Updates based on volume level
+    if (val === 0) {
+        volumeIcon.innerHTML = `<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line>`;
+    } else if (val < 50) {
+        volumeIcon.innerHTML = `<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>`;
+    } else {
+        volumeIcon.innerHTML = `<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>`;
+    }
+}
+
+musicVolumeSlider.addEventListener("input", (e) => {
+    const val = parseInt(e.target.value);
+    preMuteVolume = val;
+    isMuted = val === 0;
+    updateVolume(val);
+});
+
+volumeBtn.addEventListener("click", () => {
+    if (isMuted) {
+        isMuted = false;
+        musicVolumeSlider.value = preMuteVolume;
+        updateVolume(preMuteVolume);
+    } else {
+        isMuted = true;
+        musicVolumeSlider.value = 0;
+        updateVolume(0);
+    }
+});
