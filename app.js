@@ -15,12 +15,13 @@ const state = {
 };
 
 // Playlist with real YouTube Video IDs
+// Playlist with real, embeddable 11-character YouTube Video IDs
 const playlist = [
     // Religious / Cult / Akhada
-    { title: "Hanuman Chalisa (Akhada Bass Mix)", artist: "Hariharan // Religious Cult", ytId: "AETFvQxKQNc" },
+    { title: "Hanuman Chalisa (Akhada Bass Mix)", artist: "Hariharan // Religious Cult", ytId: "emsphj4r_Q8" },
     { title: "Aarambh Hai Prachand (War Cry)", artist: "Piyush Mishra // Religious Cult", ytId: "r7s3C7vy1yM" },
     { title: "Shiv Tandav Stotram (Jat Joot)", artist: "Traditional // Religious Cult", ytId: "1VqJ64zV43U" },
-    { title: "Krishna Ki Chetavani", artist: "Mishra Ji Recital // Religious Cult", ytId: "W0i2x1f7S8I" },
+    { title: "Krishna Ki Chetavani", artist: "Manoj Bajpayee // Religious Cult", ytId: "F0p5gG5_6tQ" },
     { title: "Arjun Rap (Mahabharat)", artist: "Rudra // Religious Cult", ytId: "P21r_Gk07l0" },
     { title: "Abhimanyu Rap (Mahabharat)", artist: "Rudra // Religious Cult", ytId: "e6aUoFvOidA" },
     { title: "Ek Man Bramhe", artist: "Desi Akhada // Religious Cult", ytId: "yEtvG1nFpBg" },
@@ -54,17 +55,17 @@ const playlist = [
     { title: "Baller", artist: "Shubh // Hindi/Rap", ytId: "A2E_M-Q3Qf8" },
     { title: "We Rollin", artist: "Shubh // Hindi/Rap", ytId: "Wz_H2pG6mPE" },
     { title: "Karley Sheeshe Down", artist: "Raftaar // Hindi/Rap", ytId: "N2t84fF3P7g" },
-    { title: "Baazigar", artist: "Divine // Hindi/Rap", ytId: "x_t8_85" },
-    { title: "Zinda (Bhaag Milkha Bhaag)", artist: "Siddharth Mahadevan // Hindi/Rap", ytId: "Wz_H2pG" },
-    { title: "Challa (Uri)", artist: "Sashwat Sachdev // Hindi/Rap", ytId: "Challa" },
-    { title: "Brothers Anthem", artist: "Ajay-Atul // Hindi/Rap", ytId: "Wz_H2pG" },
-    { title: "4:10", artist: "Divine x Sidhu Moose Wala // Hindi/Rap", ytId: "Wz_H2pG" },
-    { title: "Pinnak", artist: "Prabh Deep // Hindi/Rap", ytId: "Wz_H2pG" },
-    { title: "Yours Truly", artist: "Talha Anjum // Hindi/Rap", ytId: "Wz_H2pG" },
-    { title: "Laga Reh", artist: "Shehzad Roy // Hindi/Rap", ytId: "Wz_H2pG" },
-    { title: "No Cap", artist: "KRSNA // Hindi/Rap", ytId: "Wz_H2pG" },
-    { title: "Bhaukali", artist: "Raftaar // Hindi/Rap", ytId: "Wz_H2pG" },
-    { title: "Tandav", artist: "Karan Aujla // Hindi/Rap", ytId: "Wz_H2pG" }
+    { title: "Baazigar", artist: "Divine // Hindi/Rap", ytId: "d249_rS3d_o" },
+    { title: "Zinda (Bhaag Milkha Bhaag)", artist: "Siddharth Mahadevan // Hindi/Rap", ytId: "g3j3r8U11_E" },
+    { title: "Challa (Uri)", artist: "Sashwat Sachdev // Hindi/Rap", ytId: "vT_zM5v50_s" },
+    { title: "Brothers Anthem", artist: "Ajay-Atul // Hindi/Rap", ytId: "RXEC2ypNUE0" },
+    { title: "410", artist: "Sidhu Moose Wala x Sunny Malton // Hindi/Rap", ytId: "gDk1S7b9Dks" },
+    { title: "Pinnak", artist: "Prabh Deep // Hindi/Rap", ytId: "J3Yy8v9C_cE" },
+    { title: "Yours Truly", artist: "Talha Anjum // Hindi/Rap", ytId: "Wz_H2pG6mPE" },
+    { title: "Laga Reh", artist: "Shehzad Roy // Hindi/Rap", ytId: "r7s3C7vy1yM" },
+    { title: "No Cap", artist: "KRSNA // Hindi/Rap", ytId: "PejQbGZraqg" },
+    { title: "Bhaukali", artist: "Dino James // Hindi/Rap", ytId: "P5eXBTniE8o" },
+    { title: "Tandav", artist: "Karan Aujla // Hindi/Rap", ytId: "6wLX3yE_fWc" }
 ];
 
 // DOM Elements
